@@ -10,7 +10,6 @@ request_id = 0
 
 
 def generate_request():
-    
     global request_id
     request_id += 1
     processing_time = random.randint(1, 5)
@@ -23,7 +22,6 @@ def generate_request():
 
 
 def process_request():
-    
     if not request_queue.empty():
         req_id, processing_time = request_queue.get()
         print(f"[-] Обробка запиту {req_id} (час {processing_time} секунд)")
@@ -35,7 +33,6 @@ def process_request():
 
 
 def main():
-    
     try:
         while True:
             if random.choice([True, False]):
